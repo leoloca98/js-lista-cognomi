@@ -9,7 +9,8 @@ Consegna:
 */
 
 // *Variabili
-var display = document.getElementById("listItems");
+var listElement = document.getElementById("lastName-List");
+var listItems = "";
 var message = "Inserisci il tuo cognome: ";
 
 // *Creiamo un array contenente altri cognomi
@@ -33,6 +34,7 @@ vettLastName.push(userLastNameCapitalized);
 // * Ordino alfabeticamente la lista di cognomi(compreso quello inserito dall'utente)
 vettLastName.sort();
 console.log("L'array ordinato alfabeticamente è così:");
+listItems += Caminetti"L'array ordinato alfabeticamente:";
 
 // *Stampo la posizione dell'ultimo elemento aggiunto (il cognome dell'utente)
 // *Stampo la lista ordinata alfabeticamente
@@ -44,9 +46,13 @@ for (i = 0; i < 6; i++) {
         position = i + 1;
     }
     console.log(vettLastName[i]);
+    listItems += "<li>" + vettLastName[i] + "</li>";
 }
 
 console.log("Il cognome dell'utente si trova in posizione :" + position);
+listItems += "Il cognome dell'utente si trova in posizione :" + position;
+
+listElement.innerHTML = listItems;
 
 
 
