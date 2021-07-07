@@ -26,7 +26,7 @@ do {
 } while (!userLastName || userLastName.trim() === "");
 
 // *Faccio il capitalize tagliando e uppercasendo la prima lettera della parola
-userLastName = userLastName.toLowerCase();
+userLastName = userLastName.toLowerCase().trim();
 var userLastNameCapitalized = userLastName.charAt().toUpperCase() + userLastName.slice(1);
 
 // * Pusho il cognome alla fine dell'array
@@ -34,8 +34,6 @@ vettLastName.push(userLastNameCapitalized);
 
 // * Ordino alfabeticamente la lista di cognomi(compreso quello inserito dall'utente)
 vettLastName.sort();
-console.log("L'array ordinato alfabeticamente è così:");
-listItems += "L'array ordinato alfabeticamente:";
 
 // *Stampo la lista ordinata alfabeticamente
 var i = 0;
@@ -45,9 +43,9 @@ for (i = 0; i < 6; i++) {
     if (userLastNameCapitalized === vettLastName[i]) {
         position = i + 1;
     }
-    console.log(vettLastName[i]);
     listItems += "<li>" + vettLastName[i] + "</li>";
 }
+console.table(vettLastName);
 
 // *Stampo la posizione dell'ultimo elemento aggiunto (il cognome dell'utente)
 console.log("Il cognome dell'utente si trova in posizione :" + position);
