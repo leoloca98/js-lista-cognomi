@@ -36,7 +36,7 @@ vettLastName.push(userLastNameCapitalized);
 vettLastName.sort();
 
 // *Stampo la lista ordinata alfabeticamente
-// var i = 0;
+var i = 0;
 // var position;
 var position = vettLastName.indexOf(userLastNameCapitalized) + 1;
 
@@ -47,8 +47,10 @@ for (i = 0; i < 6; i++) {
     }
     listItems += "<li>" + vettLastName[i] + "</li>";
 }*/
+for (i = 0; i < vettLastName.length; i++) {
+    listItems += "<li>" + vettLastName[i] + "</li>";
+}
 
-listItems += "<li>" + vettLastName + "</li>";
 console.table(vettLastName);
 
 // *Stampo la posizione dell'ultimo elemento aggiunto (il cognome dell'utente)
