@@ -36,20 +36,27 @@ vettLastName.push(userLastNameCapitalized);
 vettLastName.sort();
 
 // *Stampo la lista ordinata alfabeticamente
-var i = 0;
-var position;
+// var i = 0;
+// var position;
+var position = vettLastName.indexOf(userLastNameCapitalized) + 1;
 
+/*
 for (i = 0; i < 6; i++) {
     if (userLastNameCapitalized === vettLastName[i]) {
         position = i + 1;
     }
     listItems += "<li>" + vettLastName[i] + "</li>";
-}
+}*/
+
+listItems += "<li>" + vettLastName + "</li>";
 console.table(vettLastName);
 
 // *Stampo la posizione dell'ultimo elemento aggiunto (il cognome dell'utente)
-console.log("Il cognome dell'utente si trova in posizione :" + position);
+// console.log("Il cognome dell'utente si trova in posizione :" + position);
+// listItems += "Il cognome dell'utente si trova in posizione :" + position;
+console.log("Il cognome dell'utente si trova in posizione: " + position);
 listItems += "Il cognome dell'utente si trova in posizione :" + position;
+
 
 listElement.innerHTML = listItems;
 
